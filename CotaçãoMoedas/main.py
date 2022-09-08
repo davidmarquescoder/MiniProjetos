@@ -6,4 +6,4 @@ cotacao = cotacao.json() #Transformando as informações formato JSON
 cotacao_dolar = cotacao['USDBRL']['bid'] #Buscando os valores dentro da lista
 cotacao_dolar = float(cotacao_dolar) #Transformando de str para float
 
-print(f'DOLAR: {cotacao_dolar:.2f}') #Imprimindo a cotação do  dolar
+print(f'DOLAR: R$ {cotacao_dolar:.2f}') #Imprimindo a cotação do  dolar
