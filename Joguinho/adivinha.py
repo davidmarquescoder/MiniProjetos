@@ -1,7 +1,10 @@
+import os
+
 secreto  = 'notas'
 digitadas = []
 
 while True:
+    print(f'\n{digitadas}\n')
     letra = input('Digite uma letra: ')
     
     if len(letra) > 1:
@@ -15,7 +18,6 @@ while True:
         continue
     
     digitadas.append(letra)
-    print(f'\n{digitadas}\n')
     
     if letra in secreto:
         print(f'UHULL! A LETRA "{letra}" EXISTE NA PALAVRA!\n')
@@ -29,5 +31,8 @@ while True:
                 print(f'Sinto muito, mas a palavra secreta era "{secreto}"\n Você perdeu =(')
                 break
     else:
-        print(f'A LETRA "{letra}" NÃO EXISTE NA PALAVRA!')
+        print(f'A LETRA "{letra}" NÃO EXISTE NA PALAVRA!\n')
         digitadas.pop()
+    
+    os.system('pause')
+    os.system('cls')
