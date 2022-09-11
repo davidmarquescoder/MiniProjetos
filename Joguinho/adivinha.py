@@ -1,4 +1,4 @@
-secreto  = 'carro'
+secreto  = 'notas'
 digitadas = []
 
 while True:
@@ -20,7 +20,7 @@ while True:
     if letra in secreto:
         print(f'UHULL! A LETRA "{letra}" EXISTE NA PALAVRA!\n')
         
-        if len(digitadas) == len(secreto)-1:
+        if len(digitadas) == len(secreto):
             res = input('Você já achou todas as letras, tente adivinhar qual a palavra secreta: ')
             if res == secreto:
                 print('PARABENS!!! VOCÊ ACERTOU A PALAVRA SECRETA!!!!!')
