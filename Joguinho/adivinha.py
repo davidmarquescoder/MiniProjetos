@@ -4,8 +4,14 @@ digitadas = []
 while True:
     letra = input('Digite uma letra: ')
     
-    if len(letra) > 1 or letra.isnumeric():
-        print('AHHH! ISSO NÃO VALE, DIGITE APENAS LETRAS!!! E DIGITE SOMENTE UMA LETRA POR VEZ!')
+    if len(letra) > 1:
+        print('AHHH! ISSO NÃO VALE, DIGITE SOMENTE UMA LETRA POR VEZ!')
+        continue
+    if letra.isnumeric():
+        print('AHHH! ISSO NÃO VALE, DIGITE APENAS LETRAS!!!')
+        continue
+    if letra in digitadas:
+        print('Essa letra já foi digitada!')
         continue
     
     digitadas.append(letra)
@@ -14,7 +20,7 @@ while True:
     if letra in secreto:
         print(f'UHULL! A LETRA "{letra}" EXISTE NA PALAVRA!\n')
         
-        if len(digitadas) == len(secreto):
+        if len(digitadas) == len(secreto)-1:
             res = input('Você já achou todas as letras, tente adivinhar qual a palavra secreta: ')
             if res == secreto:
                 print('PARABENS!!! VOCÊ ACERTOU A PALAVRA SECRETA!!!!!')
