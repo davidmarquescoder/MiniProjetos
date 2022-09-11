@@ -4,8 +4,8 @@ digitadas = []
 while True:
     letra = input('Digite uma letra: ')
     
-    if len(letra) > 1:
-        print('AHHH! ISSO NÃO VALE, DIGITE APENAS UMA LETRA!')
+    if len(letra) > 1 or letra.isnumeric():
+        print('AHHH! ISSO NÃO VALE, DIGITE APENAS LETRAS!!! E DIGITE SOMENTE UMA LETRA POR VEZ!')
         continue
     
     digitadas.append(letra)
