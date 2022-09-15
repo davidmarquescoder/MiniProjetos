@@ -1,6 +1,7 @@
+from objetos import*
 import os
 
-secreto  = 'ferrari'
+secreto  = [p3.nome.lower(), p3.dicas.upper()]
 digitadas = []
 
 os.system('cls')
@@ -49,7 +50,7 @@ while True:
     
     digitadas.append(letra)
     
-    if letra in secreto:
+    if letra in secreto[0]:
         print(f'UHULL! A LETRA "{letra}" EXISTE NA PALAVRA!\n')
     else:
         print(f'A LETRA "{letra}" NÃO EXISTE NA PALAVRA!\n')
@@ -60,16 +61,19 @@ while True:
             print('O jogo acabou pra você!\nSuas chances acabaram =(\n\n')
             break
         print(f'Você perdeu uma de suas chances, agora você tem apenas {chances} chances\n\n'.upper())
+        dica = input('Você quer uma dica? ')
+        if dica == 'sim':
+            print(secreto[1])
         digitadas.pop()
     
     secreto_temp = ''
-    for letra_secreta in secreto:
+    for letra_secreta in secreto[0]:
         if letra_secreta in digitadas:
             secreto_temp += letra_secreta
         else: 
             secreto_temp += '*'
     
-    if secreto_temp == secreto:
+    if secreto_temp == secreto[0]:
         print(f'VOCÊ GANHOU!! A PALAVRA SECRETA É: {secreto_temp}')
         break
     
