@@ -59,7 +59,7 @@ while True:
             print(f'Chances = {chances}\n')
             print('O jogo acabou pra você!\nSuas chances acabaram =(\n\n')
             break
-        print(f'Você perdeu uma de suas chances, agora você tem apenas {chances} chances')
+        print(f'Você perdeu uma de suas chances, agora você tem apenas {chances} chances\n\n'.upper())
         digitadas.pop()
     
     secreto_temp = ''
