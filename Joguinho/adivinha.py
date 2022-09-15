@@ -24,7 +24,7 @@ while True:
     elif modo == 'hard':
         chances = 1
         break
-    if modo != 'easy' and modo != 'medium' and modo != 'hard':
+    elif modo != 'easy' and modo != 'medium' and modo != 'hard':
         print('Digite um modo de jogo válido!!\n\n'.upper())
         continue
 print('======O JOGO COMEÇOU======\n\n')
