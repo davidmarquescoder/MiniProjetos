@@ -1,10 +1,14 @@
 import os
 
-secreto  = 'notas'
+chances = 3
+secreto  = 'ferrari'
 digitadas = []
 
 while True:
-    print(f'\n{digitadas}\n')
+    if chances <= 0:
+        print('Você perdeu! suas chances acabaram =(')
+        break
+
     letra = input('Digite uma letra: ')
     
     if len(letra) > 1:
@@ -21,18 +25,22 @@ while True:
     
     if letra in secreto:
         print(f'UHULL! A LETRA "{letra}" EXISTE NA PALAVRA!\n')
-        
-        if len(digitadas) == len(secreto):
-            res = input('Você já achou todas as letras, tente adivinhar qual a palavra secreta: ')
-            if res == secreto:
-                print('PARABENS!!! VOCÊ ACERTOU A PALAVRA SECRETA!!!!!')
-                break
-            else:
-                print(f'Sinto muito, mas a palavra secreta era "{secreto}"\n Você perdeu =(')
-                break
     else:
         print(f'A LETRA "{letra}" NÃO EXISTE NA PALAVRA!\n')
+        chances -= 1
         digitadas.pop()
+    
+    secreto_temp = ''
+    for letra_secreta in secreto:
+        if letra_secreta in digitadas:
+            secreto_temp += letra_secreta
+        else: 
+            secreto_temp += '*'
+    
+    if secreto_temp == secreto:
+        print(f'VOCÊ GANHOU!! A PALAVRA SECRETA É: {secreto_temp}')
+        break
     
     os.system('pause')
     os.system('cls')
+    print(f'PALAVRA: {secreto_temp}\n\n')
