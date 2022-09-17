@@ -1,7 +1,9 @@
 from objetos import*
+import random
 import os
 
-secreto  = [p3.nome.lower(), p3.dicas.upper()]
+a = random.choice([0, 1, 2, 3])
+secreto  = [ob[a].lower(), dc[a].upper()]
 digitadas = []
 
 os.system('cls')
