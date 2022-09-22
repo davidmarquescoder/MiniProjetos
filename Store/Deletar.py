@@ -13,8 +13,8 @@ def deletar_produto():
 
     #CREAT
     def deletar():
-        name = en_nome.get()
-        comando_delet = f'DELETE FROM cadastroprodutos WHERE nome_produtos = "{name}"'
+        id = en_nome.get()
+        comando_delet = f'DELETE FROM cadastroprodutos WHERE idCadastroProdutos = "{id}"'
         cursor.execute(comando_delet)
         conexao.commit()
 
@@ -24,7 +24,7 @@ def deletar_produto():
     janela_d.geometry('540x260')
     janela_d['bg'] = 'orange'
 
-    lbl_nome = Label(janela_d, text='DIGITE O NOME DO PRODUTO QUE DESEJA DELETAR', font='Congenial 14 bold', bg='orange')
+    lbl_nome = Label(janela_d, text='DIGITE O ID DO PRODUTO QUE DESEJA DELETAR', font='Congenial 14 bold', bg='orange')
     lbl_nome.place(x=12, y=30)
 
     en_nome = Entry(janela_d, width=30, font='Congenial 14')

@@ -18,7 +18,7 @@ def ver_produtos():
         lista = cursor.fetchall()
         tm = len(lista)
         for i in range(0, tm):
-            en_ver.insert(END, f'ID: {lista[i][0]} - Nome: {lista[i][1]} - PC: {lista[i][2]} PV: {lista[i][3]}\n')
+            en_ver.insert(END, f'ID: {lista[i][0]}   Nome: {lista[i][1]}   PC: {lista[i][2]}   PV: {lista[i][3]}\n')
 
     #CONFIGURAÇÕES DA JANELA DE CADASTRO
     janela_vu = Toplevel()
