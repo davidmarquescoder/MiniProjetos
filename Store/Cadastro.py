@@ -20,7 +20,7 @@ def janela_cadastro():
         pc = en_preco1.get()
         pv = en_preco2.get()
         qt = en_quantidade.get()
-        comando_cadastro = f'INSERT INTO cadastroprodutos (nome_produtos, preco_compra, preco_venda, quantidade_produtos) VALUES ("{str(name)}", "{float(pc)}", "{float(pv)}", "{int(qt)}")'
+        comando_cadastro = f'INSERT INTO cadastroprodutos (nome_produtos, preco_compra, preco_venda, quantidade_produtos) VALUES ("{str(name).upper()}", "{float(pc)}", "{float(pv)}", "{int(qt)}")'
         cursor.execute(comando_cadastro)
         conexao.commit()
         caixaT.insert(END, f'STATUS: ITEM CADASTRADO\n\n\nÚLTIMO ITEM CADASTARDO:\n{name}')

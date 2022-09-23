@@ -18,7 +18,7 @@ def ver_produtos():
         lista = cursor.fetchall()
         tm = len(lista)
         for i in range(0, tm):
-            en_ver.insert(END, f'ID: {lista[i][0]}   Nome: {lista[i][1]}   PC: {lista[i][2]}   PV: {lista[i][3]}\n')
+            en_ver.insert(END, f'{lista[i][0]}  {lista[i][1]}  {lista[i][3]}    QNT: {lista[i][4]}\n')
 
     #CONFIGURAÇÕES DA JANELA DE CADASTRO
     janela_vu = Toplevel()
@@ -27,16 +27,16 @@ def ver_produtos():
     janela_vu['bg'] = 'orange'
 
     lbl_nome = Label(janela_vu, text='VER LISTA DE PRODUTOS CADASTRADOS', font='Congenial 14 bold', bg='orange')
-    lbl_nome.place(x=60, y=26)
+    lbl_nome.place(x=60, y=15)
 
-    en_ver = Text(janela_vu, width=46, height=12, font='Congenial 10')
-    en_ver.place(x=19, y=60)
+    en_ver = Text(janela_vu, width=48, height=12, font='Congenial 10')
+    en_ver.place(x=19, y=70)
 
     btn0 = Button(janela_vu, text='LISTAR PRODUTOS', width=16, height=0, font='Congenial 10 bold', command = ver)
-    btn0.place(x=360, y=120)
+    btn0.place(x=368, y=120)
 
     btn_destroy = Button(janela_vu, text='VOLTAR', width=10, height=0, font='Congenial 10 bold', command = janela_vu.destroy)
-    btn_destroy.place(x=360, y=160)
+    btn_destroy.place(x=368, y=160)
 
     janela_vu.mainloop()
     
