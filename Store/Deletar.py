@@ -22,9 +22,9 @@ def deletar_produto():
     janela_d = Toplevel()
     janela_d.title('Deletar Produtos')
     janela_d.geometry('540x260')
-    janela_d['bg'] = 'orange'
+    janela_d['bg'] = '#F0F8FF'
 
-    lbl_nome = Label(janela_d, text='DIGITE O ID DO PRODUTO QUE DESEJA DELETAR', font='Congenial 14 bold', bg='orange')
+    lbl_nome = Label(janela_d, text='DIGITE O ID DO PRODUTO QUE DESEJA DELETAR', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_nome.place(x=12, y=30)
 
     en_id = Entry(janela_d, width=30, font='Congenial 14')

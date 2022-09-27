@@ -27,21 +27,21 @@ def ver_produtos():
     janela_vu = Toplevel()
     janela_vu.title('Deletar Produtos')
     janela_vu.geometry('540x292')
-    janela_vu['bg'] = 'orange'
+    janela_vu['bg'] = '#F0F8FF'
 
-    lbl_nome = Label(janela_vu, text='VER LISTA DE PRODUTOS CADASTRADOS', font='Congenial 14 bold', bg='orange')
+    lbl_nome = Label(janela_vu, text='VER LISTA DE PRODUTOS CADASTRADOS', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_nome.place(x=60, y=15)
 
-    lbl_des0 = Label(janela_vu, text='ID', bg='orange')
+    lbl_des0 = Label(janela_vu, text='ID', bg='#F0F8FF')
     lbl_des0.place(x=48, y=50)
 
-    lbl_des1 = Label(janela_vu, text='NOME', bg='orange')
+    lbl_des1 = Label(janela_vu, text='NOME', bg='#F0F8FF')
     lbl_des1.place(x=117, y=50)
 
-    lbl_des2 = Label(janela_vu, text='PREÇO/V', bg='orange')
+    lbl_des2 = Label(janela_vu, text='PREÇO/V', bg='#F0F8FF')
     lbl_des2.place(x=188, y=50)
 
-    lbl_des3 = Label(janela_vu, text='QUANT', bg='orange')
+    lbl_des3 = Label(janela_vu, text='QUANT', bg='#F0F8FF')
     lbl_des3.place(x=272, y=50)
 
     en_ver0 = Text(janela_vu, width=10, height=12, font='Congenial 10')

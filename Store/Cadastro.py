@@ -29,18 +29,18 @@ def janela_cadastro():
     janela_c = Toplevel()
     janela_c.title('Cadastrar Produtos')
     janela_c.geometry('650x280')
-    janela_c['bg'] = 'orange'
+    janela_c['bg'] = '#F0F8FF'
 
-    lbl_nome = Label(janela_c, text='NOME PRODUTO', font='Congenial 14 bold', bg='orange')
+    lbl_nome = Label(janela_c, text='NOME PRODUTO', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_nome.place(x=10, y=30)
 
-    lbl_preco1 = Label(janela_c, text='PREÇO DE COMPRA', font='Congenial 14 bold', bg='orange')
+    lbl_preco1 = Label(janela_c, text='PREÇO DE COMPRA', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_preco1.place(x=10, y=60)
 
-    lbl_preco2 = Label(janela_c, text='PREÇO DE VENDA', font='Congenial 14 bold', bg='orange')
+    lbl_preco2 = Label(janela_c, text='PREÇO DE VENDA', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_preco2.place(x=10, y=90)
 
-    lbl_quantidade = Label(janela_c, text='QUANTIDADE', font='Congenial 14 bold', bg='orange')
+    lbl_quantidade = Label(janela_c, text='QUANTIDADE', font='Congenial 14 bold', bg='#F0F8FF')
     lbl_quantidade.place(x=10, y=120)
 
     en_nome = Entry(janela_c, width=14)
