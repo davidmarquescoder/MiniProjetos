@@ -34,6 +34,7 @@ print('======O JOGO COMEÇOU======\n\n')
 while True:
     if chances <= 0:
         print('Você perdeu! suas chances acabaram =(')
+        os.system('pause')
         break
 
     letra = input('Digite uma letra: ')
@@ -61,6 +62,7 @@ while True:
             os.system('cls')
             print(f'Chances = {chances}\n')
             print('O jogo acabou pra você!\nSuas chances acabaram =(\n\n')
+            os.system('pause')
             break
         print(f'Você perdeu uma de suas chances, agora você tem apenas {chances} chances\n\n'.upper())
         dica = input('Você quer uma dica? ')
@@ -77,6 +79,7 @@ while True:
     
     if secreto_temp == secreto[0]:
         print(f'VOCÊ GANHOU!! A PALAVRA SECRETA É: {secreto_temp}')
+        os.system('pause')
         break
     
     os.system('pause')
