@@ -1,0 +1,49 @@
+<LoginScreen>
+    FloatLayout:
+        MDTopAppBar:
+            title: 'CHECKPOINT'
+            left_action_items: [["arrow-left", lambda x: app.callback()]]
+            right_action_items: [["dots-vertical", lambda x: app.callback()]]
+            elevation: 14
+            md_bg_color: 1,0.8,0,1
+            pos_hint:{'top': 1}
+        Image:
+            source: 'img/user.png'
+            size_hint: .4,.4
+            pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+        MDLabel:
+            text: 'SEJA BEM-VINDO'
+            font_style: 'H5'
+            bold: True
+            color: 0, 0, 0, 1
+            pos_hint: {'center_x': 0.76, 'center_y': 0.6}
+        MDLabel:
+            text: 'FAÇA O LOGIN PARA CONTINUAR'
+            font_size: 14
+            bold: False
+            color: 0, 0, 0, 1
+            pos_hint: {'center_x': 0.742, 'center_y': 0.564}
+        MDTextField:
+            id: user
+            hint_text: 'Usuário'
+            icon_right: 'account-circle'
+            size_hint_x: .64
+            pos_hint: {'center_x': 0.52, 'center_y': 0.50}
+        MDTextField:
+            hint_text: 'Senha'
+            icon_right: 'account-lock'
+            password: True
+            size_hint_x: .64
+            pos_hint: {'center_x': 0.52, 'center_y': 0.429}
+        MDFillRoundFlatButton:
+            text: 'Entrar'
+            text_color: 1, 1, 1, 1
+            elevation: 14
+            font_size: 18
+            size_hint_x: .64
+            pos_hint: {'center_x': 0.52, 'center_y': 0.289}
+            on_press: app.get_user()
+        MDTextButton:
+            text: 'Esqueci minha senha'
+            font_size: 12
+            pos_hint: {'center_x': 0.68, 'center_y': 0.39}

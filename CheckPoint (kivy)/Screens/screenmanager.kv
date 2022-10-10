@@ -1,0 +1,26 @@
+#:include LoginScreen login_screen.LoginScreen
+#:include TemaScreen login_screen.TemaScreen
+
+<MainScreenManager>:
+    MDScreen:
+        name: 'telainicial'
+        MDRaisedButton:
+            text: 'FAZER LOGIN'
+            pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+            on_release: root.current = 'tela1'
+        MDRaisedButton:
+            text: 'MUDAR TEMA'
+            pos_hint:{'center_x': 0.5, 'center_y': 0.3}
+            on_release: root.current = 'tela2'
+    LoginScreen:
+        name: 'tela1'
+        MDIconButton:
+            icon: 'home'
+            pos_hint:{'center_x': 0.04, 'center_y': 0.87}
+            on_release: root.current = 'telainicial'
+    TemaScreen:
+        name: 'tela2'
+        MDIconButton:
+            icon: 'home'
+            pos_hint:{'center_x': 0.04, 'center_y': 0.979}
+            on_release: root.current = 'telainicial'

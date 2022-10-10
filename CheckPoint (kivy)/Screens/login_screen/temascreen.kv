@@ -1,0 +1,26 @@
+<TemaScreen>
+    FloatLayout:
+        MDRectangleFlatIconButton:
+            text: 'Dark'
+            icon: 'cog'
+            text_color: 1,1,1,1
+            md_bg_color: 0, 0, 0, 1
+            size_hint_x: 0.2
+            on_release: app.tema_dark()
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+        MDRectangleFlatIconButton:
+            text: 'Light'
+            icon: 'cog'
+            text_color: 0,0,0,1
+            md_bg_color: 1, 1, 1, 1
+            size_hint_x: 0.2
+            on_release: app.tema_light()
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        MDRectangleFlatIconButton:
+            text: 'Outro'
+            icon: 'cog'
+            text_color: 1,1,1,1
+            md_bg_color: 1, 0, 0, 1
+            size_hint_x: 0.2
+            on_release: app.tema_outro()
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
