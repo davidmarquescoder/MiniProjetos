@@ -45,7 +45,7 @@ class LiveApp(MDApp, App):
     def tema_outro(self):
         self.theme_cls.primary_palette = 'Red'
     def get_user(self):
-        print('Logado')
+        print(self.root.ids.user.text)
 
 
 
