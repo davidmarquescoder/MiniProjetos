@@ -1,4 +1,5 @@
 from kivymd.uix.screen import MDScreen
 
 class LoginScreen(MDScreen):
-    pass
+    def get_user(self):
+        print(self.ids.user.text)

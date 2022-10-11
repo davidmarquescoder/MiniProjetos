@@ -44,8 +44,6 @@ class LiveApp(MDApp, App):
         self.theme_cls.theme_style = 'Light'
     def tema_outro(self):
         self.theme_cls.primary_palette = 'Red'
-    def get_user(self):
-        print(self.root.ids.user.text)
 
 
 
