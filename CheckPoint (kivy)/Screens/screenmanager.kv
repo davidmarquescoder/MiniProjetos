@@ -4,22 +4,23 @@
 <MainScreenManager>:
     MDScreen:
         name: 'telainicial'
-        MDRaisedButton:
+        MDRectangleFlatIconButton:
             text: 'FAZER LOGIN'
-            pos_hint:{'center_x': 0.5, 'center_y': 0.5}
-            on_release: root.current = 'tela1'
-        MDRaisedButton:
-            text: 'MUDAR TEMA'
-            pos_hint:{'center_x': 0.5, 'center_y': 0.3}
-            on_release: root.current = 'tela2'
+            icon: 'account'
+            pos_hint:{'center_x': 0.5, 'center_y': 0.8}
+            on_release: root.current = 'tela_login'
+        MDIconButton:
+            icon: 'cog'
+            pos_hint:{'center_x': 0.74, 'center_y': 0.8}
+            on_release: root.current = 'tela_tema'
     LoginScreen:
-        name: 'tela1'
+        name: 'tela_login'
         MDIconButton:
             icon: 'home'
             pos_hint:{'center_x': 0.04, 'center_y': 0.87}
             on_release: root.current = 'telainicial'
     TemaScreen:
-        name: 'tela2'
+        name: 'tela_tema'
         MDIconButton:
             icon: 'home'
             pos_hint:{'center_x': 0.04, 'center_y': 0.979}
